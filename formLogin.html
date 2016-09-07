@@ -1,0 +1,39 @@
+<html>
+	<head>
+				<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="http://www.octavio.com.ar/favicon.ico">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="css/animacion.css">
+
+
+		<script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
+	 	<script SRC="js/app.js" TYPE="text/javascript"></script>
+	</head>
+		<body ng-app="">
+
+			<div class="CajaInicio animated bounceInRight">
+				<h1>LOGIN<h>
+					
+				<form id="FormIngreso"  enctype="multipart/form-data" name="formLogin" novalidate>
+
+					<label for="correo">CORREO</label>
+					<input type="email" size="40" placeholder="Ingrese su correo" ng-model="mail" name="mail" 
+					required />
+					<span ng-show="formLogin.mail.$invalid" >*el campo es requerido</span>
+					</br></br>
+
+					<label for="pass">CONTRASEÑA</label>
+					<input type="password" size="40" placeholder="Ingrese password" ng-model="pass" name="pass" required />
+					<span ng-if="formLogin.pass.$invalid" >*el campo es requerido</span>
+					</br></br>
+
+					
+					<input type="submit" class="btn btn-info value="ingresar" ng-model="enviar" name="enviar" ng-disabled="formLogin.$invalid"  />
+					
+
+				</form>
+			</div>
+		</body>
+</html>
