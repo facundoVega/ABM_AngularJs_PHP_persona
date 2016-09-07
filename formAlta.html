@@ -52,123 +52,15 @@
 		<div class="CajaInicio animated bounceInRight">
 			<h1> <!--?php echo $titulo; ?-->titulo </h1>
 
-			<form id="FormIngreso"  enctype="multipart/form-data" name="miForm" novalidate>
-
-
-				<label for="apellido">APELLIDO</label> 
-				<input type="text" name="apellido" ng-model="apellido" placeholder="Ingrese apellido" value="" required />
-				<tag ng-show="miForm.apellido.$invalid">* campo requerido</tag>
-				</br></br>
-
-
-				<label for="nombre">NOMBRE</label> 
-				<input type="text" name="nombre" ng-model="nombre" placeholder="Ingrese nombre" required />
-				<tag ng-show="miForm.nombre.$invalid">* campo requerido</tag>
-				</br></br>
-
-
-				<label for="edad">EDAD</label>
-				<input type="number" ng-model="edad" name="edad"  placeholder="Ingrese edad" required/>
-				<tag ng-show="miForm.edad.$invalid">* campo requerido</tag>
-				</br><br>
-
-
-				<label for="sexo">SEXO:</label>
-				<ul>
-					<li><label for="sexo_m">MASCULINO</label><input id="sexo_m" type="radio" ng-model="sexo_m" name="sexo" value="masculino" checked  /></br></li>
-					<li><label for="sexo_f">FEMENINO</label><input type="radio" id="sexo_f" ng-model="sexo_f" name="sexo" value="femenino" /></br></li>
-				</ul>
-				</br>
-				</br>
-
-				<label for="dni">DNI</label></br>
-				<input type="number" placeholder="ingrese dni" ng-model="dni" name="dni" required />
-				<tag ng-show="miForm.dni.$invalid">* campo requerido</tag>
-				</br></br>
-
+			<form id="FormIngreso"  enctype="multipart/form-data" >
+				<input type="text" name="apellido" ng-model="persona.apellido" placeholder="ingrese apellido" value="" />
+				<span id="lblApellido" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+				</span>
+				<input type="text" name="nombre" ng-model="persona.nombre" placeholder="ingrese nombre" value="" /> <span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+				<input type="text" name="dni" ng-model="persona.dni" placeholder="ingrese dni" value=""     /> 
+				<span id="lblDni" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+				<p style='color: black;'>*El DNI no se puede modificar.</p> ": "" ; ?>
 				
-				<label for="email">EMAIL</label></br>
-				<input type="email" placeholder="ingrese su email" ng-model="email" name="email" />
-				<tag ng-show="miForm.email.$invalid">* campo requerido</tag>
-				</br></br>
-
-
-				<label for="estadoCivil">ESTADO CIVIL</label>
-				<select name="estadoCivil">
-					<option value=""> </option>
-					<option value="casado">CASADO</option>
-					<option value="soltero">SOLTERO</option>
-					<option value="divorciado">DIVORCIADO</option>
-					<option value="viudo">VIUDO</option>
-				</select>
-				</br></br>
-
-
-				<label for="fechaNacimiento">FECHA DE NACIMIENTO</label></br>
-				<input type="date" name="fecha_n" ng-model="fecha_n" required />
-				<tag ng-show="miForm.fecha_n.$invalid">* campo requerido</tag>
-				</br></br>
-
-
-				<label for="contraseña">CONTRASEÑA</label></br>
-				<input type="password" maxlength="10" size="30" placeholder="Ingrese su clave" name="pass" ng-model="pass"  required/>
-				<tag ng-show="miForm.pass.$invalid">* campo requerido</tag>
-				</br>
-
-				<label for="copy_contraseña">COPIA DE CONTRASEÑA</label></br>
-				<input type="password" maxlength="10" name="pass_c" ng-model="pass_c" placeholder="Ingrese su clave nuevamente" size="30" required/>
-				<tag ng-show="miForm.pass_c.$invalid">* campo requerido</tag>
-				</br></br>
-
-
-				<label for="lenguaje_programacion">LENGUAJES DE PROGRAMACION</label></br>
-				<ul>
-						<li>
-							<label for="lenguaje_csharp">C#</label>
-							<input type="checkbox" name="lenguaje" id="lenguaje_csharp" ng-model="lenguaje_csharp" />
-						</li>
-
-						<li>
-							<label for="lenguaje_c">C</label>
-							<input type="checkbox" id="lenguaje_c" name="lenguaje" ng-model="lenguaje_c" />
-						</li>
-
-						<li>
-							<label for="lenguaje_VB">VISUAL BASIC</label>
-							<input type="checkbox" id="lenguaje_VB" name="lenguaje" ng-model="lenguaje_vb" />
-						</li>
-
-						<li>
-							<label for="lenguaje_javascript">JAVASCRIPT</label>
-							<input type="checkbox" id="lenguaje_javascript" name="lenguaje" ng-model="lenguaje_jscript" />
-						</li>
-
-						<li>
-							<label for="lenguaje_php">PHP</label>
-							<input type="checkbox" id="lenguaje_php" name="lenguaje" ng-model="lenguaje1" />
-						</li> 
-
-
-
-				</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
-			
 				<input type="hidden" name="idOculto" id="id" value="" />
 				<!--
 				<input type="file" name="foto" />
@@ -178,9 +70,8 @@
 				<p style="  color: black;">*La foto se actualiza al guardar.</p>
 				-->
 
-				
-					<a class="btn btn-info " name="guardar" ng-click="Guardar()" ng-disabled="miForm.$invalid"><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a>
-				
+				<a class="btn btn-info " name="guardar" ng-click="Guardar()" ><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a>
+					
 				<input type="hidden" value="" id="idParaModificar" name="agregar" />
 				<input type="hidden" value="" id="hdnAgregar" name="agregar" />
 				</div>
