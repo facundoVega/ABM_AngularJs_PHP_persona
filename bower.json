@@ -1,0 +1,21 @@
+{
+  "name": "ABM_AngularJs_PHP_persona.git",
+  "homepage": "https://github.com/facundoVega/ABM_AngularJs_PHP_persona",
+  "description": "prueba de bower",
+  "main": "bower.json",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "^0.3.1",
+    "estilos": "http://github.com/octaviovillegas/estilos.git"
+  }
+}

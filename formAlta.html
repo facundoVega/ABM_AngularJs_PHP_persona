@@ -75,9 +75,10 @@
 
 				<label for="sexo">SEXO:</label>
 				<ul>
-					<li><label for="sexo_m">MASCULINO</label><input id="sexo_m" type="radio" ng-model="sexo_m" name="sexo" value="masculino" checked  /></br></li>
-					<li><label for="sexo_f">FEMENINO</label><input type="radio" id="sexo_f" ng-model="sexo_f" name="sexo" value="femenino" /></br></li>
+					<li><label for="sexo_m">MASCULINO</label><input id="sexo_m" type="radio" ng-model="sexo" name="sexo" value="masculino" required  /></br></li>
+					<li><label for="sexo_f">FEMENINO</label><input type="radio" id="sexo_f" ng-model="sexo" name="sexo" value="femenino" required/></br></li>
 				</ul>
+				<span ng-if="miForm.sexo.$invalid">* debe seleccionar una opcion</span>
 				</br>
 
 				<label for="dni">DNI</label></br>
@@ -93,8 +94,8 @@
 
 
 				<label for="estadoCivil">ESTADO CIVIL</label>
-				<select name="estadoCivil">
-					<option value=""> </option>
+				<select name="estadoCivil" ng-model="estadoCivil" required >
+					<option selected disabled value=""> SELECCIONE ESTADO CIVIL</option>
 					<option value="casado">CASADO</option>
 					<option value="soltero">SOLTERO</option>
 					<option value="divorciado">DIVORCIADO</option>

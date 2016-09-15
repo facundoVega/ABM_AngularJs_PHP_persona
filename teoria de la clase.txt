@@ -1,0 +1,28 @@
+							RUTEO
+
+
+se divide la pag web para que tenga n elementos los cuales se corpoten como una app navegable gracias a ajax y otros.
+Se logra que la app sea una pagina.
+puedo tener una oag principal(index.html) y de ahi ir a cualquier pagina .Esta pag principal tendra lo necesario para que funcione mi aplicacion dentro de su head (gralmente)
+
+cuando empezamos a trabajar con pedasos de codigo hay un tag(ngview) el cual se puede usar como un tag, como atributo de un tag o como clase de un tag.
+
+Coloco un html nuevo y le agrego el ngview en el body como un tag.
+traemos de internet:(para poder rutear necesito)
+angular y bootstrap para eso abrimos una consola en nuestra carpeta
+borramos la carpeta bower components y en la cnsola el comando bower init .contestoa las preguntas de la consola coloco todo yes
+esto genera un archivo bower.jason que tiene cargado todas las respuestas contestadas
+en la consola nuevamente ponemos bower install angular --save.
+esto crea la carpeta de bower con angular y en el json agrgego angular como dependenci
+luego bower instal bootstrap --save.
+ponemos  bower install angular -ui-router --save
+
+
+ ll
+
+bower install http://github.com/octaviovillegas/estilos.git --save
+
+
+Agarramos el template bajado en bootstrap y le colocamos: 
+
+Las referencias van solo en el index.
